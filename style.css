@@ -9,6 +9,12 @@ body {
 h1 {
     text-align: center;
 }
+h4 {
+    font-size: 1.8em;
+    font-family: Georgia, serif;
+    color: #dedcde;
+    padding-bottom: 8px;
+}
 .tmdLogo {
     height: 200px;
     margin-bottom: -25px;
@@ -36,7 +42,7 @@ hr {
     display: flex;
     justify-content: center;
     background-color: rgba(0,0,0, 0.75);
-    background-image: linear-gradient(to right, black, black, black, rgb(18, 18, 18), rgb(50, 50, 50));
+    background-image: linear-gradient(to right, black, black, rgb(18, 18, 18), rgb(50, 50, 50));
     box-shadow: 4px 4px 4px rgba(32, 32, 32, 0.5);
     border-radius: 12px;
     height: 496px;

@@ -15,11 +15,26 @@ var apps = [
         "hasVideo":"true",
         "isWebsite":"false"
     },
-
+    {
+        "name":"Puzzled Knight",
+        "description": "<h4>Puzzled Knight</h4><p><ul><li>Match tiles to attack your opponents or defend against their attacks</li><li>Earn gold to buy special moves to help you defeat your enemies</li><li>3 game modes, Arcade, Classic, and Tournament</li><li>Each opponent has their own strengths and weaknesses</li><li>Earn experience points to level up your character</li><li>Increase your stats to even the odds!</li></ul></p>",
+        "link":'<a href="https://play.google.com/store/apps/details?id=com.tmdstudios.puzzledknight"><img src="media/googleBanner.png"/></a>',
+        "video":"media/PuzzledKnight.mp4",
+        "hasVideo":"true",
+        "isWebsite":"false"
+    },
+    {
+        "name":"Road To Rage",
+        "description": "<h4>Road To Rage</h4><p>Soothe your road rage by unloading a hood-mounted gun on your erratic fellow drivers. Can you get to your destination with your sanity intact?</p><p><ul><li>10 levels of rage relief</li><li>Increasing difficulty that will challenge your reflexes</li><li>A collection of 58 vehicles</li><li>Simple gameplay that is difficult to master</li></ul></p>",
+        "link":'<a href="https://play.google.com/store/apps/details?id=com.wordpress.tmdstudios"><img src="media/googleBanner.png"/></a>',
+        "video":"media/RTR.mp4",
+        "hasVideo":"true",
+        "isWebsite":"false"
+    },
 ];
 var currentApp = 0;
 
-function previousApp(){
+function prevApp(){
     if(currentApp>0){
         currentApp--;
     }else{
