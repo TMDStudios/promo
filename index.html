@@ -11,41 +11,36 @@
     <div>
         <h1><img class="tmdLogo" src="media/tmdLogo.png"></h1>
     </div>
+
+    <div class="intro">
+        <p>TMD Studios is a one-man software development team with a focus on open-source projects.</p>
+        <p>Most applications displayed on this page can be found on the <a href="https://github.com/TMDStudios">TMD Studios GitHub</a> page.</p>
+    </div>
     
-    <div class="more">
-        <div class="project">
-            <p class="browse">&lt;</p>
-            <video width="640" height="480" autoplay muted controls loop>
-                <source src="media/BlockWarsPromo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="description">
-                <div>
-                    <h4>Block Wars</h4>
-                    <p>Shoot your way through an onslaught of blocks and enemy ships</p>
-                    <p>
-                        <ul>
-                            <li>Blocks that get past you will stack, making the play area smaller</li>
-                            <li>Use power-ups to destroy stacked blocks</li>
-                            <li>Enemy ships get more difficult as the game progresses</li>
-                            <li>Follow enemy patterns to anticipate their attacks</li>
-                        </ul>
-                    </p>
-                    <p>How far can you get?</p>
-                </div>
-                <p class="storeLink"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>
+    <div class="project">
+        <p onclick="prevApp()" class="prev">&lt;</p>
+        <video id="video" width="640" height="480" autoplay muted controls loop>
+            <source src="media/BlockWars.mp4" type="video/mp4">Your browser does not support the video tag.
+        </video>
+        <div class="description">
+            <div id="description">
+                <h4 id="name">Block Wars</h4>
+                <p>Shoot your way through an onslaught of blocks and enemy ships</p>
+                <p>
+                    <ul>
+                        <li>Blocks that get past you will stack, making the play area smaller</li>
+                        <li>Use power-ups to destroy stacked blocks</li>
+                        <li>Enemy ships get more difficult as the game progresses</li>
+                        <li>Follow enemy patterns to anticipate their attacks</li>
+                    </ul>
+                </p>
+                <p>How far can you get?</p>
             </div>
-            <p class="browse">&gt;</p>
+            <p class="storeLink"  id="link"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>
         </div>
+        <p onclick="nextApp()" class="next">&gt;</p>
     </div>
 
-    <div class="feature">
-        <h2>Game Room</h2>
-        <div class="featureItem">
-            <a href="https://gameroom.up.railway.app/"><img src="media/GameRoom.png"/></a>
-            <p>Game Room is an open-source platform for educators to play games and/or review materials with their students</p>
-        </div>
-    </div>
-
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
