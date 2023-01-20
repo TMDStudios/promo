@@ -19,13 +19,14 @@
     </div>
 
     <div class="intro">
-        <p>TMD Studios is a one-man software development team with a focus on open-source projects.</p>
-        <p>Most applications displayed on this page can be found on the <a href="https://github.com/TMDStudios">TMD Studios GitHub</a> page.</p>
+        <p class="introPt1">TMD Studios is a one-man software development team with a focus on open-source projects.</p>
+        <p class="introPt2">Most applications displayed on this page can be found on the <a href="https://github.com/TMDStudios">TMD Studios GitHub</a> page.</p>
+        <p class="introAlt"><a href="https://github.com/TMDStudios">TMD Studios GitHub Page</a></p>
     </div>
     
     <div class="project">
         <p onclick="prevApp()" class="prev">&lt;</p>
-        <video id="video" width="320" height="480" autoplay muted controls loop>
+        <video id="video" width="320" height="480" autoplay muted controls loop poster="media/BlockWars.png">
             <source src="media/BlockWars.mp4" type="video/mp4">Your browser does not support the video tag.
         </video>
         <div class="description">
@@ -42,9 +43,13 @@
                 </p>
                 <p>How far can you get?</p>
             </div>
-            <p class="storeLink"  id="link"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>
+            <p class="storeLink" id="link"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>
         </div>
         <p onclick="nextApp()" class="next">&gt;</p>
+    </div>
+
+    <div class="mobileLink">
+        <p class="storeLink" id="link"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>
     </div>
 
     <script type="text/javascript" src="app.js"></script>
