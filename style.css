@@ -46,6 +46,7 @@ hr {
     box-shadow: 4px 4px 4px rgba(32, 32, 32, 0.5);
     border-radius: 12px;
     height: 496px;
+    align-items: center;
 }
 .project:hover {
     box-shadow: 6px 6px 6px rgba(0, 0, 55, 0.75);
@@ -54,7 +55,7 @@ hr {
     color: rgba(255,255,255, 0.33);
     font-size: 40px;
     background-color: rgba(255,255,255, 0.25);
-    padding: 228px 6px 228px 4px;
+    padding: 100% 4px 100% 6px;
     border-radius: 12px 0px 0px 12px;
 }
 .prev:hover {
@@ -66,7 +67,7 @@ hr {
     color: rgba(255,255,255, 0.33);
     font-size: 40px;
     background-color: rgba(255,255,255, 0.25);
-    padding: 228px 6px 228px 4px;
+    padding: 100% 6px 100% 4px;
     border-radius: 0px 12px 12px 0px;
 }
 .next:hover {
@@ -97,6 +98,21 @@ hr {
 .storeLink {
     text-align: center;
 }
+.banner-div {
+	width: 60%; 
+	margin: auto; 
+	text-align: center;
+}
+.banner {
+    box-shadow: 0 0 0 0 rgb(87, 114, 187);
+    transition: 0.2s;
+    border-radius: 8px;
+    margin-top: 48px;
+    max-width: 100%;
+}
+.banner:hover {
+    box-shadow: 0 0 12px 0 rgb(137, 181, 248);
+}
 
 @media all and (max-width: 480px){
     body {
@@ -109,28 +125,28 @@ hr {
     .intro {
         margin-bottom: 2px;
     }
-    .introPt1, .introPt2, .description {
+    .introPt1, .introPt2, .description, .banner-div {
         display: none;
     }
     .project {
         width: 100%;
-        height: 480px;
+        height: 66vh;
         background-image: linear-gradient(to right, black, black);
         overflow: hidden;
+        align-items: center;
     }
     #video {
-        width: 300px;
+        width: 80%;
+        max-height: 60vh;
         padding: 0px;
     }
     .prev {
         color: rgba(255,255,255, 0.25);
         background-color: rgba(255,255,255, 0.15);
-        padding: 228px 4px 228px 6px;
     }
     .next {
         color: rgba(255,255,255, 0.25);
         background-color: rgba(255,255,255, 0.15);
-        padding: 228px 6px 228px 4px;
     }
     .prev:hover, .next:hover {
         color: rgba(255,255,255, 0.5);
@@ -138,7 +154,7 @@ hr {
     }
     .mobileLink img {
         width: 180px;
-        padding-top: 8px;
+        padding-top: 16px;
     }
 }
 @media all and (min-width: 500px){
