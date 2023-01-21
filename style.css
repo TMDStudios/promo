@@ -2,7 +2,7 @@
 body {
     background-color: #bababaae;
 	width: 80vw;
-    max-width: 80vw;
+    max-width: 1080px;
 	margin: auto;
     font-family: sans-serif;
 }
@@ -80,9 +80,13 @@ hr {
     background-color: rgba(255,255,255, 0.5);
     cursor: pointer;
 }
-.project video {
+.videoContainer {
     flex: 1;
     padding: 8px 48px 8px 48px;
+    text-align: center;
+}
+.videoContainer img {
+    max-height: 480px;
 }
 .description {
     flex: 2;
@@ -122,6 +126,7 @@ hr {
 @media all and (max-width: 550px){
     body {
         width: 96vw;
+        max-width: 96vw;
         height: var(--app-height);
     }
     .tmdLogo {
@@ -141,9 +146,18 @@ hr {
         overflow: hidden;
         align-items: center;
     }
+    .videoContainer {
+        padding: 0px;
+        text-align: center;
+        height: 100%;
+    }
+    .videoContainer img {
+        max-height: 96%;
+        padding-top: 2%;
+    }
     #video {
         width: 80%;
-        max-height: 90%;
+        max-height: 100%;
         padding: 0px;
     }
     .prev {
