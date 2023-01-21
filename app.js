@@ -62,3 +62,7 @@ function showApp(){
     document.getElementById("video").setAttribute("src", apps[currentApp].video);
     document.getElementById("video").setAttribute("poster", apps[currentApp].poster);
 }
+
+const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+window.addEventListener('resize', appHeight)
+appHeight()
