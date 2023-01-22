@@ -68,7 +68,6 @@ var apps = [
 ];
 var currentApp = 0;
 var currentImg = 0;
-var slideshowActive = false;
 var imageOpacity = 1;
 
 function prevApp(){
@@ -91,39 +90,25 @@ function nextApp(){
 
 function showApp(){
     if(apps[currentApp].hasVideo=="true"){
-        slideshowActive=false;
         document.getElementById("mediaContainer").innerHTML = '<video id="video" width="320" height="480" autoplay muted controls loop poster="media/BlockWars.png"><source src="media/BlockWars.mp4" type="video/mp4">Your browser does not support the video tag.</video>'
         document.getElementById("description").innerHTML = apps[currentApp].description;
         document.getElementById("link").innerHTML = apps[currentApp].link;
         document.getElementById("video").setAttribute("src", apps[currentApp].video);
         document.getElementById("video").setAttribute("poster", apps[currentApp].poster);
     }else{
-        slideshowActive=true;
-        document.getElementById("mediaContainer").innerHTML = '<img id="img" onclick="nextImage()" src="media/'+apps[currentApp].images[0]+'.png"/>'
+        currentImg = 0;
+        document.getElementById("mediaContainer").innerHTML = '<img id="img" onclick="nextImage()" src="media/'+apps[currentApp].images[currentImg]+'.png"/>'
         document.getElementById("description").innerHTML = apps[currentApp].description;
         document.getElementById("link").innerHTML = apps[currentApp].link;
-        setTimeout(handleSlideshow, 2500);
     }
 }
 
 function nextImage(){
-    slideshowActive=false;
-    showImg();
-}
-
-function showImg(){
     currentImg++;
     if(currentImg>=apps[currentApp].images.length){
         currentImg = 0; 
     }
     fadeOutImg(); 
-}
-
-function handleSlideshow(){
-    if(slideshowActive){
-        showImg();
-        setTimeout(handleSlideshow, 3333);
-    }
 }
 
 function fadeOutImg(){
