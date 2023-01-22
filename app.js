@@ -39,31 +39,28 @@ var apps = [
         "name":"Py Learning Companion",
         "description": "<h4>Py Learning Companion</h4><p><ul><li>Light weight app with bite sized Python lessons and activities</li><li>Great for learning on the go</li><li>Multiple types of activities that will test your Python knowledge</li><li>Hundreds of activities to test your skills</li><li>Simple to use</li></ul></p>",
         "link":'<a href="https://play.google.com/store/apps/details?id=com.tmdstudios.python"><img src="media/googleBanner.png"/></a>',
-        "video":"",
-        "poster":"",
-        "hasVideo":"false",
+        "video":"media/PLC.mp4",
+        "poster":"media/PLC.png",
+        "hasVideo":"true",
         "isWebsite":"false",
-        "images":["plc1","plc2","plc3","plc4","plc5","plc6"]
     },
     {
         "name":"Crypto Ledger",
         "description": "<h4>Crypto Ledger</h4><p>Crypto Ledger is an open source extension of the Crypto Ledger website. It makes use of the Crypto Ledger API to buy, sell, and monitor coins. The app was built using Kotlin and Android Studio. It uses coroutines and retrofit to make API calls, and fragments for navigation. The source code is available on <a style='text-decoration: none; color: #dedcde;' href='https://github.com/TMDStudios/crypto_ledger_app_kotlin'>GitHub</a></p><p>Buying and selling coins requires an API Key, while getting live price data does not.</p>",
         "link":'<a href="https://play.google.com/store/apps/details?id=com.tmdstudios.cryptoledgerkotlin"><img src="media/googleBanner.png"/></a>',
-        "video":"",
-        "poster":"",
-        "hasVideo":"false",
+        "video":"media/CryptoLedger.mp4",
+        "poster":"media/CryptoLedger.png",
+        "hasVideo":"true",
         "isWebsite":"false",
-        "images":["cl1","cl2","cl3","cl4","cl5"]
     },
     {
         "name":"Mock Trader",
-        "description": "<h4>Mock Trader</h4><p>The player starts with $10,000 and is tasked with accumulating as much wealth as possible by buying and selling Bitcoin</p><p>The Bitcoin price starts at $50,000 and changes based on randomized news</p><p>Can you become a (mock) millionaire?</p>",
+        "description": "<h4>Mock Trader</h4><p>The player starts with $10,000 and is tasked with accumulating as much wealth as possible by buying and selling Bitcoin</p><p>The Bitcoin price starts at $50,000 and changes based on randomized news</p><p>Can you become a (mock) billionaire?</p>",
         "link":'<a href="https://play.google.com/store/apps/details?id=com.tmdstudios.mocktrader"><img src="media/googleBanner.png"/></a>',
-        "video":"",
-        "poster":"",
-        "hasVideo":"false",
+        "video":"media/MockTrader.mp4",
+        "poster":"media/MockTrader.png",
+        "hasVideo":"true",
         "isWebsite":"false",
-        "images":["mt1","mt2","mt3","mt4"]
     }
 ];
 var currentApp = 0;
