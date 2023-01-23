@@ -6,7 +6,9 @@ var apps = [
         "video":"media/BlockWars.mp4",
         "poster":"media/BlockWars.png",
         "hasVideo":"true",
-        "isWebsite":"false"
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Buddy Breakout",
@@ -15,7 +17,9 @@ var apps = [
         "video":"media/BuddyBreakout.mp4",
         "poster":"media/BuddyBreakout.png",
         "hasVideo":"true",
-        "isWebsite":"false"
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Puzzled Knight",
@@ -24,7 +28,9 @@ var apps = [
         "video":"media/PuzzledKnight.mp4",
         "poster":"media/PuzzledKnight.png",
         "hasVideo":"true",
-        "isWebsite":"false"
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Road To Rage",
@@ -33,7 +39,9 @@ var apps = [
         "video":"media/RTR.mp4",
         "poster":"media/RTR.png",
         "hasVideo":"true",
-        "isWebsite":"false"
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Py Learning Companion",
@@ -42,7 +50,9 @@ var apps = [
         "video":"media/PLC.mp4",
         "poster":"media/PLC.png",
         "hasVideo":"true",
-        "isWebsite":"false",
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Crypto Ledger",
@@ -51,7 +61,9 @@ var apps = [
         "video":"media/CryptoLedger.mp4",
         "poster":"media/CryptoLedger.png",
         "hasVideo":"true",
-        "isWebsite":"false",
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
     },
     {
         "name":"Mock Trader",
@@ -60,12 +72,45 @@ var apps = [
         "video":"media/MockTrader.mp4",
         "poster":"media/MockTrader.png",
         "hasVideo":"true",
-        "isWebsite":"false",
+        "thumb":"",
+	    "fullImg":"",
+        "gitHubLink":""
+    },
+    {
+        "name":"Crypto Ledger",
+        "description": '<h4><a href="http://cryptoledger.pythonanywhere.com/">Crypto Ledger</a></h4><p>Open-source website for tracking cryptocurrency trades</p>',
+        "link":"",
+        "video":"",
+        "poster":"",
+        "hasVideo":"false",
+        "thumb":"media/CryptoLedgerWebsiteThumb.png",
+	    "fullImg":"media/CryptoLedgerWebsite.png",
+        "gitHubLink":"https://github.com/TMDStudios/crypto_ledger"
+    },
+    {
+        "name":"Mock Trader",
+        "description": '<h4><a href="https://mocktrader-prod-mocktrader-wdutfz.mo4.mogenius.io/">Mock Trader</a></h4><p>Open-source Bitcoin trading game</p>',
+        "link":"",
+        "video":"",
+        "poster":"",
+        "hasVideo":"false",
+        "thumb":"media/MockTraderWebsiteThumb.png",
+	    "fullImg":"media/MockTraderWebsite.png",
+        "gitHubLink":"https://github.com/TMDStudios/mock_trader"
+    },
+    {
+        "name":"Game Room",
+        "description": '<h4><a href="https://gameroom.up.railway.app/">Game Room</a></h4><p>A platform for educators to play games and/or review materials with their students</p>',
+        "link":"",
+        "video":"",
+        "poster":"",
+        "hasVideo":"false",
+        "thumb":"media/GameRoomWebsiteThumb.png",
+	    "fullImg":"media/GameRoomWebsite.png",
+        "gitHubLink":"https://github.com/TMDStudios/GameRoom"
     }
 ];
 var currentApp = 0;
-var currentImg = 0;
-var imageOpacity = 1;
 
 function prevApp(){
     if(currentApp>0){
@@ -87,44 +132,22 @@ function nextApp(){
 
 function showApp(){
     if(apps[currentApp].hasVideo=="true"){
+        document.getElementById("mobileLink").innerHTML = '<p class="storeLink" id="link"><a href="https://play.google.com/store/apps/details?id=com.tmdstudios.blockwars"><img src="media/googleBanner.png"/></a></p>';
         document.getElementById("mediaContainer").innerHTML = '<video id="video" width="320" height="480" autoplay muted controls loop poster="media/BlockWars.png"><source src="media/BlockWars.mp4" type="video/mp4">Your browser does not support the video tag.</video>'
         document.getElementById("description").innerHTML = apps[currentApp].description;
         document.getElementById("link").innerHTML = apps[currentApp].link;
         document.getElementById("video").setAttribute("src", apps[currentApp].video);
         document.getElementById("video").setAttribute("poster", apps[currentApp].poster);
     }else{
-        currentImg = 0;
-        document.getElementById("mediaContainer").innerHTML = '<img id="img" onclick="nextImage()" src="media/'+apps[currentApp].images[currentImg]+'.png"/>'
-        document.getElementById("description").innerHTML = apps[currentApp].description;
-        document.getElementById("link").innerHTML = apps[currentApp].link;
+        document.getElementById("mediaContainer").innerHTML = '<img id="websiteImg" onclick="viewImage()" src="'+apps[currentApp].thumb+'"/><div class="websiteInfo">'+apps[currentApp].description+'</div>';
+        document.getElementById("description").innerHTML = '<p style="text-align: center;"><img class="gitHubImg" src="media/GitHub.png"/></p><h6><a href='+apps[currentApp].gitHubLink+'>'+apps[currentApp].name+'<br>Source Code</a></h6>';
+        document.getElementById("link").innerHTML = "";
+        document.getElementById("mobileLink").innerHTML = "";
     }
 }
 
-function nextImage(){
-    currentImg++;
-    if(currentImg>=apps[currentApp].images.length){
-        currentImg = 0; 
-    }
-    fadeOutImg(); 
-}
-
-function fadeOutImg(){
-    imageOpacity -= .1;
-    document.getElementById("img").style.opacity = imageOpacity;
-    if(imageOpacity>.1){
-        setTimeout(fadeOutImg, 33);
-    }else{
-        document.getElementById("mediaContainer").innerHTML = '<img id="img" onclick="nextImage()" src="media/'+apps[currentApp].images[currentImg]+'.png"/>'  
-        fadeInImg();
-    }
-}
-
-function fadeInImg(){
-    imageOpacity += .1;
-    document.getElementById("img").style.opacity = imageOpacity;
-    if(imageOpacity<1){
-        setTimeout(fadeInImg, 20);
-    }
+function viewImage(){
+    window.open("/"+apps[currentApp].fullImg);
 }
 
 const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
