@@ -108,6 +108,17 @@ var apps = [
         "thumb":"media/GameRoomWebsiteThumb.png",
 	    "fullImg":"media/GameRoomWebsite.png",
         "gitHubLink":"https://github.com/TMDStudios/GameRoom"
+    },
+    {
+        "name":"Study Room",
+        "description": '<h4><a href="https://studyroom.tmdstudios.net/">Study Room</a></h4><p>Open-source platform for students to improve their English vocabulary and grammar</p>',
+        "link":"",
+        "video":"",
+        "poster":"",
+        "hasVideo":"false",
+        "thumb":"media/StudyRoomWebsiteThumb.png",
+	    "fullImg":"media/StudyRoomWebsite.png",
+        "gitHubLink":"https://github.com/TMDStudios/StudyRoom"
     }
 ];
 var currentApp = 0;
